@@ -5,13 +5,13 @@ import geni.rspec.pg as rspec
 request = portal.context.makeRequestRSpec()
 
 prefixForIP="192.168.1."
-link = request. LAN("lan")
+link = request.LAN("lan")
 
 # Create a XenVM
 for i in range(2):
   if i == 0:
     node = request.XenVM("webserver")
-    node. routable_control_ip = "true"
+    node.routable_control_ip = "true"
   else:
     node = request.XenVM ("observer" )
     
