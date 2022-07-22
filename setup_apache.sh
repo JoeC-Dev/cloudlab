@@ -2,7 +2,7 @@
 set -x
 
 sudo apt update
-sudo apt install -y  apache2 nfs-kernal-server
+sudo apt install -y  apache2 nfs-kernel-server
 
 sudo mkdir /share/log
 sudo chown nobody:nogroup /share/log
