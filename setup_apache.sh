@@ -2,7 +2,7 @@
 set -x
 
 sudo apt update
-sudo apt install -y  apache2 nfs-kernel-server
+sudo apt install -y  apache2 nfs-kernel-server geoip-bin
 
 sudo mkdir /var/webserver_log
 sudo chown nobody:nogroup /var/webserver_log
