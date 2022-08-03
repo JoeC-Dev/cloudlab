@@ -1,10 +1,11 @@
 #!/bin/bash 
 
-sudo cat -n /var/webserver_monitor/unauthorized.log > temp
+sudo tail -n 1 /var/webserver_monitor/aunauthorized.log > temp 
 
-declare -i entries2=$(tail -n 1 temp |  grep -Eo '^[^d]+')
-
-if ((entries2>(entries*2)))
+if (diff temp last.log)
 then
 echo hey
 fi
+
+
+sudo tail -n 1 /var/webserver_monitor/aunauthorized.log > /var/webserver_monitor/last.log
