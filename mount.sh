@@ -12,4 +12,4 @@ echo "*/60 * * * * bash /local/repository/monitor.sh" > temp
 crontab temp 
 rm temp
 
-entries=0
+declare -i entries=0
