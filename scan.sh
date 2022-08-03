@@ -12,8 +12,6 @@ sudo cp temp3 /var/webserver_log/unauthorized.log
 
 rm temp2 temp3
 
-sudo tail -n 1 /var/webserver_log/aunauthorized.log > /var/webserver_log/last.log
-
 # NEED TO ONLY DO THIS ONCE WHEN BOOTING MIGHT BE ABLE TO PUT IT IN SETUP APACHE 
 #echo "*/5 * * * * bash /local/repository/scan.sh" > temp5
 
