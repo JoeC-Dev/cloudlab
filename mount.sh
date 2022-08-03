@@ -13,3 +13,5 @@ crontab temp
 rm temp
 
 declare -i entries=$((0))
+
+sudo touch /var/webserver_monitor/last.log
