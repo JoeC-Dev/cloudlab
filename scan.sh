@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo grep -i -E 'sshd' /var/log/auth.log | grep Received | cut -d ' ' -f 1,2,3,10 > temp
+sudo grep -i -E 'Invalid' /var/log/auth.log | grep from | cut -d ' ' -f 1,2,3,10 > temp
 
 while IFS= read -r line; do arr+=("$line");done <temp
 
