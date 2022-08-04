@@ -25,6 +25,10 @@ for i in range(3):
   
   if i == 0:
     node.addService(rspec.Execute(shell="sh", command="sudo bash /local/repository/setup_apache.sh"))
+  else if i == 1:
+    node.addService(rspec.Execute(shell="sh", command="sudo bash /local/repository/mount.sh"))
+  else: 
+    node.addService(rspec.Execute(shell="sh", command="sudo bash /local/repository/ldap.sh"))
     
 # Print the RSpec to the enclosing page.
 portal.context.printRequestRSpec()
